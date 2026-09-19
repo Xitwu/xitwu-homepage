@@ -3,18 +3,405 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>xitwu</title>
+<title>第一财经·有研究 第2期 2025</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%231f5fa8'/><text x='50' y='66' font-size='52' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>研</text></svg>">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<script src="assets/echarts.min.js"></script>
 <style>
-body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#fafafa;color:#111}
-.box{text-align:center}
-h1{font-size:28px;font-weight:600;letter-spacing:2px;margin:0 0 12px}
-p{font-size:14px;color:#888;margin:0}
+:root{--blue:#1f5fa8;--blue-d:#15437a;--blue-l:#4a86c8;--ink:#14181a;--paper:#f4f2ec;--gray:#6b7276;--line:#e2ded4;--dark:#1c2123;--amber:#e8a33d}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans SC',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.9;-webkit-font-smoothing:antialiased}
+.serif{font-family:'Noto Serif SC',serif}
+.hero{background:var(--dark);color:#fff;padding:70px 24px 60px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-140px;top:-140px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(31,95,168,.6),transparent 70%)}
+.inner{max-width:960px;margin:0 auto;position:relative;z-index:1}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:3px;color:var(--blue-l);margin-bottom:22px}
+.kicker .bar{width:34px;height:2px;background:var(--blue-l)}
+.hero h1{font-family:'Noto Serif SC',serif;font-size:clamp(28px,4.2vw,44px);line-height:1.3;font-weight:900;margin-bottom:16px}
+.hero .sub{font-size:17px;color:#c8cdcf;font-weight:300;max-width:680px}
+.byline{margin-top:28px;font-size:13px;color:#8b9296;border-top:1px solid rgba(255,255,255,.12);padding-top:16px}
+.toc{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.toc-inner{max-width:960px;margin:0 auto;display:flex;gap:6px;overflow-x:auto;padding:10px 24px}
+.toc a{white-space:nowrap;font-size:14px;color:#444;text-decoration:none;padding:8px 14px;border-radius:20px;transition:.2s}
+.toc a:hover{background:var(--blue);color:#fff}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+.section{padding:54px 0 6px;scroll-margin-top:60px}
+.tag{display:inline-block;font-size:12px;letter-spacing:2px;color:var(--blue);font-weight:700;margin-bottom:8px}
+.sec-bar{width:46px;height:4px;background:var(--blue);margin:6px 0 20px}
+h2.sec{font-family:'Noto Serif SC',serif;font-size:clamp(24px,3.4vw,32px);font-weight:700;line-height:1.35}
+h3.sub{font-family:'Noto Serif SC',serif;font-size:20px;font-weight:700;margin:34px 0 12px;color:var(--blue-d)}
+.lead{font-size:18px;color:#3a4042;font-weight:300;margin-bottom:10px}
+p.body{font-size:16.5px;margin:0 0 18px;text-align:justify}
+.pull{border-left:3px solid var(--blue);background:#fff;padding:20px 24px;margin:26px 0;font-family:'Noto Serif SC',serif;font-size:18px;line-height:1.7;color:var(--blue-d)}
+.small{font-size:12.5px;color:var(--gray);margin-top:10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}
+.card{background:#fff;border:1px solid var(--line);padding:20px 20px 8px;border-radius:4px}
+.card h4{font-size:15.5px;font-weight:700;margin-bottom:2px}
+.card .unit{font-size:12px;color:var(--gray);margin-bottom:4px}
+.chart{width:100%;height:300px}
+.chart.tall{height:340px}
+.full{grid-column:1/-1}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff;margin-top:20px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--blue);color:#fff;font-weight:500}
+tr:nth-child(even) td{background:#f7f9fc}
+footer{background:var(--dark);color:#8b9296;text-align:center;padding:36px 24px;font-size:13px;margin-top:60px}
+footer .src{max-width:720px;margin:0 auto;line-height:1.8}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}.chart{height:260px}}
 </style>
 </head>
 <body>
-<div class="box">
-<h1>xitwu.com</h1>
-<p>网站重建中，敬请期待</p>
-</div>
+
+<header class="hero">
+  <div class="inner">
+    <div class="kicker"><span class="bar"></span>第一财经 · 有研究 研报　第2期 2025</div>
+    <h1 class="serif">恒瑞：集采倒逼的转型<br><span style="font-size:.55em;color:#9fb3af;font-weight:500">兼 2024 职场薪酬调查与裁员潮行业图谱</span></h1>
+    <p class="sub">集采对营收的不利影响，倒逼恒瑞在产品结构调整与国际化战略上都付出了更多心力。本期另含公司人职场薪酬现状调查，以及汽车、科技、医疗、金融、游戏等行业的 2024 裁员图谱。</p>
+    <div class="byline">《第一财经·有研究》研报汇编</div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="toc-inner">
+    <a href="#hengrui">恒瑞医药</a>
+    <a href="#salary">职场薪酬调查</a>
+    <a href="#layoff">2024 裁员图谱</a>
+  </div>
+</nav>
+
+<!-- ============ 恒瑞 ============ -->
+<section class="section wrap" id="hengrui">
+  <div class="tag">封面故事</div>
+  <div class="sec-bar"></div>
+  <h2 class="sec">恒瑞：集采倒逼的转型</h2>
+  <p class="lead" style="margin-top:14px">2024 年 1 月 6 日，恒瑞医药正式向港交所递交上市申请，寻求港股二次上市，传闻融资规模至少 20 亿美元。这是恒瑞自 2000 年登陆 A 股后的首次再融资。</p>
+  <p class="body">恒瑞被誉为“药茅”，在国内医药产业拥有丰富度排名第一的管线。2016 年以来的医保谈判、2018 年以来的“集采”对其冲击最大：2019 年恒瑞仿制药与创新药营收比为 82:18。受集采影响，公司营收从 2020 年仿制药高峰 277.35 亿元连续两年下降，2023 年才逐步企稳。截至目前已完成 9 批集采药品，药价平均降幅超 50%。</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h4>疫情增收期过后，恒瑞净利润开始下滑</h4>
+      <div class="unit">营收 / 归母净利润 / 同比</div>
+      <div id="hRev" class="chart tall"></div>
+      <div class="small">数据来源：恒瑞医药历年年报</div>
+    </div>
+    <div class="card">
+      <h4>恒瑞货币资金储备持续扩大</h4>
+      <div class="unit">单位：亿元</div>
+      <div id="hCash" class="chart tall"></div>
+      <div class="small">数据来源：恒瑞医药历年年报</div>
+    </div>
+    <div class="card">
+      <h4>销售费率下降，研发费率上升</h4>
+      <div class="unit">销售费用率 vs 研发费用率</div>
+      <div id="hFee" class="chart"></div>
+      <div class="small">数据来源：恒瑞医药历年年报</div>
+    </div>
+    <div class="card">
+      <h4>抗肿瘤药物是主要收入引擎</h4>
+      <div class="unit">2023 年营业收入 / 占比 / 毛利率</div>
+      <div id="hSeg" class="chart"></div>
+      <div class="small">数据来源：恒瑞医药2023年年报</div>
+    </div>
+  </div>
+
+  <h3 class="sub">躲不开的集采影响</h3>
+  <p class="body">2020 年前中国有超 4500 家原料药和制剂生产企业，90% 以上是仿制药企业。2024 年 4 月披露，前 9 批集采中选的 1600 多个产品中国产仿制药占比 96%。2018 年首批集采，恒瑞主力麻醉产品“右美托咪定”因未通过一致性评价落标，在医疗机构合计实际采购曾达 16.8 亿元；落标后右美营收从 2019 年 5.2 亿元跌到 2020 年 1.2 亿元。</p>
+  <p class="body">2021 年第五批集采，恒瑞 8 个重磅产品中标，但降价幅度远高于竞争对手——苯磺顺阿曲库铵注射液中标价 15.8 元，对手报价 24.18 元、34.38 元；50mg 规格奥沙利铂恒瑞 91.8 元，齐鲁制药 198 元。2021 年恒瑞上市后首次营收下滑 6.59%；流通市值从 2021 年初超 6000 亿元峰值蒸发到 2000 亿元。2024 年 12 月第十批集采，恒瑞新申报仅两款、中标一款，仿制药集采利空出尽。</p>
+
+  <div class="card">
+    <h4>恒瑞几款重要产品的降价幅度</h4>
+    <table>
+      <colgroup><col style="width:24%"><col style="width:38%"><col style="width:38%"></colgroup>
+      <tr><th>批次</th><th>品种</th><th>中标后价格降幅</th></tr>
+      <tr><td>国家集采</td><td>紫杉醇</td><td>76.22%</td></tr>
+      <tr><td>国家集采</td><td>伊立替康</td><td>93.08%</td></tr>
+      <tr><td>医保谈判</td><td>卡瑞利珠单抗</td><td>85.21%</td></tr>
+      <tr><td>医保谈判</td><td>吡咯替尼（160mg）</td><td>58.90%</td></tr>
+      <tr><td>医保谈判</td><td>阿帕替尼（0.25g）</td><td>36.89%</td></tr>
+    </table>
+    <div class="small">数据来源：医药魔方</div>
+  </div>
+
+  <h3 class="sub">创新药转型与借船出海</h3>
+  <p class="body">2018 年底恒瑞砍掉近半仿制药研发项目，转向创新药。2024 年中报在研创新药 57 个、仿制药仅 1 个；已上市创新药 17 款。卡瑞利珠单抗 2019 年获批、2021 年医保后放量，年销从 3.1 万瓶增至 44 万瓶、收入近 13 亿元，是恒瑞唯一年销超 10 亿元的创新药大单品。研发投入 2023 年近 50 亿元；截至 2024 年 9 月末货币资金与交易性金融资产近 230 亿元。</p>
+  <p class="body">为降低风险，恒瑞转向 BD（业务发展）交易：License-in/out、联合开发、股权投资、并购。2023 年 8 月将 SHR-1905 授权给 One Bio（后更名 Aiolos Bio），后者不到一年转手获得 12.45 亿美元收益，是恒瑞的 50 倍——这给恒瑞上了一课。2024 年 5 月恒瑞与贝恩资本等设美国合资公司 Hercules，将 GLP-1 系列打包授权，首付款+里程碑累计约 60.35 亿美元，并取得 19.9% 股权，开启 NewCo 模式。</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h4>创新药收入占比逐年提升</h4>
+      <div class="unit">创新药 vs 仿制药及其他</div>
+      <div id="hInnov" class="chart"></div>
+      <div class="small">数据来源：恒瑞医药财报</div>
+    </div>
+    <div class="card">
+      <h4>与头部药企研发实力对比</h4>
+      <div class="unit">2023 年研发费用，单位：亿元</div>
+      <div id="hRd" class="chart"></div>
+      <div class="small">数据来源：各公司2023年财报及公开资料</div>
+    </div>
+    <div class="card full">
+      <h4>国内与海外营收占比变化</h4>
+      <div class="unit">单位：亿元</div>
+      <div id="hOversea" class="chart"></div>
+      <div class="small">数据来源：恒瑞医药财报</div>
+    </div>
+  </div>
+<!-- ============ 职场薪酬调查 ============ -->
+<section class="section wrap" id="salary">
+  <div class="tag">有故事 · 调查</div>
+  <div class="sec-bar"></div>
+  <h2 class="sec">2024 公司人职场与薪酬现状</h2>
+  <p class="lead" style="margin-top:14px">在 1033 名受访职场人中，47.12% 认为当前经济环境对自己“有很大影响，感到前途未卜”，仅 6.97% 认为“情况稳定”。48.24% 认同传统线性发展模式已不适合当下，47.49% 部分认同——“非线性成长”正在被广泛讨论。</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h4>和2023年相比，年薪（税前）增长幅度</h4>
+      <div class="unit">单位：%</div>
+      <div id="sRaise" class="chart tall"></div>
+      <div class="small">调研样本：1033名职场人</div>
+    </div>
+    <div class="card">
+      <h4>2024 年年薪（税前）分布</h4>
+      <div class="unit">单位：%</div>
+      <div id="sSalary" class="chart tall"></div>
+      <div class="small">调研样本：1033名职场人</div>
+    </div>
+    <div class="card">
+      <h4>2024 年工作经历了哪些变动</h4>
+      <div class="unit">单位：%</div>
+      <div id="sChange" class="chart tall"></div>
+    </div>
+    <div class="card">
+      <h4>外部因素对职业安全感的影响</h4>
+      <div class="unit">单位：%</div>
+      <div id="sSecure" class="chart tall"></div>
+    </div>
+  </div>
+
+  <h3 class="sub">线性路径中的“非线性思考”</h3>
+  <p class="body">53.41% 的人认为未来就业环境将“持续低迷，需要长期适应”；58.65% 对新一年薪酬“不抱盼头，维持现状就不错”（2023 年为 54.26%）。择业偏好中，“工作和生活的平衡”首次超过“高薪和福利”成为最看重因素；对工作稳定性的追求从 2023 年 43.94% 升至 2024 年 48.99%。不同代际分化明显：00 后、90 后更愿学习新技能、做副业或主动转型；80 后、70 后前三选项都出现“保持现状、尽量避免风险”。</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h4>过去一年应对不确定性的方式</h4>
+      <div class="unit">单位：%</div>
+      <div id="sAct" class="chart"></div>
+    </div>
+    <div class="card">
+      <h4>未来3—5年职业规划最看重的三点</h4>
+      <div class="unit">2024 vs 2023，单位：%</div>
+      <div id="sValue" class="chart"></div>
+    </div>
+  </div>
+  <div class="pull" style="margin-top:22px">非线性成长并非所有人的机会：约 10% 的人能真正适应，它需要快速学习能力和可迁移核心技能。对多数人而言，在职场里带着“非线性思考”重新规划，先从副业和技能拓展做起，可能是更稳妥的答案。</div>
+</section>
+
+<!-- ============ 裁员图谱 ============ -->
+<section class="section wrap" id="layoff">
+  <div class="tag">有故事 · 数据</div>
+  <div class="sec-bar"></div>
+  <h2 class="sec">2024 裁员图谱：九个行业的收缩</h2>
+  <p class="lead" style="margin-top:14px">2024 年，从新能源汽车到科技、医疗、金融、游戏、零售、美妆、服饰、文娱，裁员潮横跨几乎所有主要行业。这是一份按行业梳理的代表公司裁员清单。</p>
+
+  <div class="card">
+    <h4>2024 年汽车行业裁员代表公司</h4>
+    <div class="unit">裁员人数（人）/ 裁员比例</div>
+    <div id="lAuto" class="chart tall"></div>
+    <div class="small">根据公开资料整理。注：大众汽车2030年前将在德国裁员超3.5万人</div>
+  </div>
+  <p class="body" style="margin-top:16px">中国新能源车 2024 年首破千万辆、渗透率连续 7 个月超 50%，但价格战惨烈：理想“五一”后裁员 18%；哪吒被曝裁员超 70%；特斯拉上半年全球员工较 2023 年底减少约 2 万人、近 14%。传统燃油车更严峻：捷豹路虎营销售后裁员 20%，保时捷中国到 2026 年底将中国门店从 150 家减至 100 家；大众计划德国裁员超 3.5 万，日产全球裁约 9000 人并与本田合并。</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h4>科技行业裁员代表公司</h4>
+      <div class="unit">裁员人数（人）</div>
+      <div id="lTech" class="chart"></div>
+      <div class="small">根据公开资料整理</div>
+    </div>
+    <div class="card">
+      <h4>医疗大健康行业裁员代表公司</h4>
+      <div class="unit">裁员人数（人）</div>
+      <div id="lHealth" class="chart"></div>
+      <div class="small">根据公开资料整理</div>
+    </div>
+  </div>
+  <p class="body" style="margin-top:16px">科技业：据 Layoffs.fyi，2024 年 542 家科技公司裁员超 15 万人，同比降 42.3%。国内阿里半年减员 6900 人、飞书裁 20%；海外英特尔裁员 1.5 万创纪录，戴尔 1.25 万，IBM 关闭中国研发部门。医疗：受带量采购影响，强生中国裁员 20%，药明康德近 3000 人，拜耳、BMS、默沙东、诺华均有收缩。</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h4>金融行业裁员代表公司</h4>
+      <div class="unit">裁员人数（人）</div>
+      <div id="lFin" class="chart"></div>
+      <div class="small">根据公开资料整理</div>
+    </div>
+    <div class="card">
+      <h4>游戏行业裁员代表公司</h4>
+      <div class="unit">裁员人数（人）</div>
+      <div id="lGame" class="chart"></div>
+      <div class="small">根据公开资料整理</div>
+    </div>
+  </div>
+  <p class="body" style="margin-top:16px">金融：A 股 IPO 数量同比降 68.05%，中金裁员 246 人；全球花旗银行计划到 2026 年底裁员 2 万人，高盛裁员 3%–4%。游戏：2024 年全球知名游戏公司裁员 1.46 万人、同比升 39%；动视暴雪被微软收购后裁员 1900 人，Unity 裁 25%，腾讯拳头裁 11%，Twitch 裁 35%。</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h4>实体零售裁员代表公司</h4>
+      <div class="unit">裁员人数（人）</div>
+      <div id="lRetail" class="chart"></div>
+      <div class="small">根据公开资料整理</div>
+    </div>
+    <div class="card">
+      <h4>美妆护肤与奢侈品裁员代表公司</h4>
+      <div class="unit">裁员人数（人）</div>
+      <div id="lBeauty" class="chart"></div>
+      <div class="small">根据公开资料整理</div>
+    </div>
+    <div class="card">
+      <h4>服装鞋履裁员代表公司</h4>
+      <div class="unit">裁员人数（人）</div>
+      <div id="lWear" class="chart"></div>
+      <div class="small">根据公开资料整理</div>
+    </div>
+    <div class="card">
+      <h4>文娱行业裁员代表公司</h4>
+      <div class="unit">裁员人数（人）</div>
+      <div id="lMedia" class="chart"></div>
+      <div class="small">根据公开资料整理</div>
+    </div>
+  </div>
+  <p class="body" style="margin-top:16px">零售：大润发母公司高鑫零售截至 2024 年 9 月 30 日裁员 16323 人、占比 16%；英国 Sainsbury's 裁 1500 人。美妆：联合利华全球裁 7500 人，雅诗兰黛裁 3%–5%，资生堂、丝芙兰、Burberry 均有收缩。服饰：李维斯裁 10%–15%，耐克全球裁 2%，加拿大鹅总部裁 17%。文娱：迪士尼皮克斯裁 14% 约 175 人，派拉蒙全球裁 15% 约 2000 人并关闭运营 11 年的电视工作室，华纳音乐裁 23%。</p>
+</section>
+
+<footer>
+  <div class="src">本文为《第一财经·有研究》研报第2期内容 HTML 重制，数据均来自恒瑞医药财报、各公司年报、Layoffs.fyi、Newzoo 及公开资料。<br>原文版权归《第一财经》所有，本站仅作阅读重排。</div>
+</footer>
+
+<script>
+const BLUE='#1f5fa8', BLUE2='#4a86c8', GRAY='#9aa0a3', AMBER='#e8a33d', RED='#d9534f';
+const base={textStyle:{fontFamily:'Noto Sans SC'},grid:{left:52,right:24,top:42,bottom:34},tooltip:{trigger:'axis'}};
+
+// 恒瑞营收净利
+echarts.init(document.getElementById('hRev')).setOption({...base,
+  legend:{top:0,textStyle:{color:'#333'}},
+  grid:{left:46,right:46,top:36,bottom:28},
+  xAxis:{type:'category',data:['2018','2019','2020','2021','2022','2023','2024H1'],axisLabel:{fontSize:10}},
+  yAxis:[{type:'value',splitLine:{lineStyle:{color:'#eee'}}},{type:'value',axisLabel:{formatter:'{value}%'}}],
+  series:[
+    {name:'营收',type:'bar',data:[174,232,277,259,213,228,118],itemStyle:{color:BLUE},barWidth:14},
+    {name:'归母净利润',type:'bar',data:[40.7,53.3,63.3,45.3,39,43.2,25.7],itemStyle:{color:BLUE2},barWidth:14},
+    {name:'同比',type:'line',yAxisIndex:1,data:[null,33.9,19.2,-6.6,-17.7,7.5,10.2],smooth:true,lineStyle:{width:3,color:AMBER},itemStyle:{color:AMBER}}]});
+
+// 货币资金 横向条形
+echarts.init(document.getElementById('hCash')).setOption({
+  grid:{left:60,right:40,top:10,bottom:20},
+  xAxis:{type:'value',splitLine:{lineStyle:{color:'#eee'}}},
+  yAxis:{type:'category',inverse:true,data:['2018','2019','2020','2021','2022','2023','2024Q1-Q3']},
+  series:[{type:'bar',data:[38.9,50.4,108.1,136.3,151.1,207.5,221.3],itemStyle:{color:BLUE},barWidth:14,label:{show:true,position:'right'}}]});
+
+// 销售/研发费率 双环
+echarts.init(document.getElementById('hFee')).setOption({
+  series:[['2018',37.1,15.3],['2020',35.3,18.0],['2022',34.5,23.0],['2024Q1-Q3',30.3,22.5]].map((r,i)=>({
+    type:'pie',radius:['30%','52%'],center:[['18%','50%'],['40%','50%'],['62%','50%'],['84%','50%']][i],
+    label:{show:true,position:'center',formatter:r[0]+'\n销售'+r[1]+'% 研发'+r[2]+'%',fontSize:10},
+    data:[{value:r[1],itemStyle:{color:BLUE}},{value:r[2],itemStyle:{color:BLUE2}}]}))
+});
+
+// 分产品
+echarts.init(document.getElementById('hSeg')).setOption({
+  grid:{left:90,right:20,top:10,bottom:20},
+  xAxis:{type:'value',splitLine:{lineStyle:{color:'#eee'}}},
+  yAxis:{type:'category',data:['其他','造影剂','麻醉镇痛药','抗肿瘤药'],axisLabel:{fontSize:11}},
+  series:[{type:'bar',data:[41.22,27.42,37.43,122.18],itemStyle:{color:BLUE2},barWidth:16,label:{show:true,position:'right',formatter:'{c}亿'}}]});
+
+// 创新药占比 三饼
+echarts.init(document.getElementById('hInnov')).setOption({
+  series:[['2022',40.5],['2023',46.6],['2024上半年',45.9]].map((r,i)=>({
+    type:'pie',radius:['34%','58%'],center:[['22%','50%'],['50%','50%'],['78%','50%']][i],
+    label:{show:true,position:'center',formatter:r[0]+'\n创新药 '+r[1]+'%',fontSize:11},
+    data:[{value:r[1],itemStyle:{color:BLUE}},{value:100-r[1],itemStyle:{color:'#e2e2e2'}}]}))
+});
+
+// 研发对比
+echarts.init(document.getElementById('hRd')).setOption({
+  grid:{left:70,right:30,top:10,bottom:24},
+  xAxis:{type:'category',data:['恒瑞','百济神州','信达生物','中国生物制药','石药集团'],axisLabel:{fontSize:10,interval:0}},
+  yAxis:{type:'value',splitLine:{lineStyle:{color:'#eee'}}},
+  series:[{type:'bar',data:[49.54,126,19.75,47.04,48.3],itemStyle:{color:BLUE},barWidth:26,label:{show:true,position:'top'}}]});
+
+// 国内外营收
+echarts.init(document.getElementById('hOversea')).setOption({...base,
+  legend:{top:0,textStyle:{color:'#333'}},
+  grid:{left:46,right:16,top:36,bottom:28},
+  xAxis:{type:'category',data:['2018','2019','2020','2021','2022','2023'],axisLabel:{fontSize:10}},
+  yAxis:{type:'value',splitLine:{lineStyle:{color:'#eee'}}},
+  series:[
+    {name:'国内',type:'bar',stack:'t',data:[167.51,226.15,268.54,251.64,204.34,217.6],itemStyle:{color:BLUE}},
+    {name:'海外',type:'bar',stack:'t',data:[6.51,6.32,7.58,6.17,7.79,6.17],itemStyle:{color:AMBER}}]});
+
+// 薪酬涨幅 横向
+echarts.init(document.getElementById('sRaise')).setOption({
+  grid:{left:90,right:50,top:10,bottom:20},
+  xAxis:{type:'value',splitLine:{lineStyle:{color:'#eee'}}},
+  yAxis:{type:'category',inverse:true,data:['不变','5%以内','-5%以内','5%至9%','-9%至-5%','10%至19%','-19%至-10%','20%至30%','-30%至-20%','30%以上','-30%以上'],axisLabel:{fontSize:10}},
+  series:[{type:'bar',data:[27.63,21.05,7.49,10.34,5.47,7.19,5.84,3.15,3.37,3.45,5.02],itemStyle:{color:AMBER},barWidth:12,label:{show:true,position:'right',formatter:'{c}%',fontSize:10}}]});
+
+// 年薪分布
+echarts.init(document.getElementById('sSalary')).setOption({
+  grid:{left:110,right:20,top:10,bottom:20},
+  xAxis:{type:'value',splitLine:{lineStyle:{color:'#eee'}}},
+  yAxis:{type:'category',inverse:true,data:['5万以内','5-8万','8-12万','12-15万','15-20万','20-30万','30-50万','50万以上'],axisLabel:{fontSize:10}},
+  series:[{type:'bar',data:[8.39,9.81,15.43,13.03,14.01,16.78,14.83,7.72],itemStyle:{color:BLUE},barWidth:12,label:{show:true,position:'right',formatter:'{c}%',fontSize:10}}]});
+
+// 工作变动
+echarts.init(document.getElementById('sChange')).setOption({
+  grid:{left:90,right:50,top:10,bottom:20},
+  xAxis:{type:'value',splitLine:{lineStyle:{color:'#eee'}}},
+  yAxis:{type:'category',inverse:true,data:['工作量激增','没有变化','主动跳槽','内部转岗','降薪/停薪','升职加薪计划被取消','转行','被裁员','工作难找待业','升职加薪','其他'],axisLabel:{fontSize:10}},
+  series:[{type:'bar',data:[31.61,26.97,15.21,13.33,13.03,11.01,10.79,8.91,8.01,7.79,5.69],itemStyle:{color:BLUE2},barWidth:11,label:{show:true,position:'right',formatter:'{c}%',fontSize:10}}]});
+
+// 安全感
+echarts.init(document.getElementById('sSecure')).setOption({
+  grid:{left:150,right:50,top:10,bottom:20},
+  xAxis:{type:'value',splitLine:{lineStyle:{color:'#eee'}}},
+  yAxis:{type:'category',inverse:true,data:['行业特有挑战','公司策略变化','职业阶段与技能匹配','全球经济不确定性','其他'],axisLabel:{fontSize:10}},
+  series:[{type:'bar',data:[62.85,58.50,53.71,50.19,4.12],itemStyle:{color:BLUE},barWidth:14,label:{show:true,position:'right',formatter:'{c}%',fontSize:10}}]});
+
+// 应对方式
+echarts.init(document.getElementById('sAct')).setOption({
+  grid:{left:130,right:50,top:10,bottom:20},
+  xAxis:{type:'value',max:70,splitLine:{lineStyle:{color:'#eee'}}},
+  yAxis:{type:'category',inverse:true,data:['学习新技能提升竞争力','从事副业/兼职','主动寻求转型/跳槽','保持现状','暂时停止现有工作','其他'],axisLabel:{fontSize:10}},
+  series:[{type:'bar',data:[60,43.67,41.12,37.23,8.12,2.17],itemStyle:{color:AMBER},barWidth:13,label:{show:true,position:'right',formatter:'{c}%',fontSize:10}}]});
+
+// 择业偏好对比
+echarts.init(document.getElementById('sValue')).setOption({...base,
+  legend:{top:0,textStyle:{color:'#333'}},
+  grid:{left:40,right:16,top:36,bottom:50},
+  xAxis:{type:'category',data:['高薪福利','工作稳定','行业前景','公司规模口碑','管理团队','工作生活平衡','提升空间','明确晋升','其他'],axisLabel:{fontSize:9,interval:0,rotate:30}},
+  yAxis:{type:'value',axisLabel:{formatter:'{value}%'},splitLine:{lineStyle:{color:'#eee'}}},
+  series:[
+    {name:'2024',type:'bar',data:[54.16,48.99,45.32,11.01,32.06,61.35,36.93,9.21,0.97],itemStyle:{color:AMBER},barWidth:10},
+    {name:'2023',type:'bar',data:[66,43.94,41.95,13.35,39.2,54.83,24.91,6.16,1.52],itemStyle:{color:'#1c2123'},barWidth:10}]});
+
+// 裁员柱状通用
+function layoffBar(id, cats, vals, color){
+  echarts.init(document.getElementById(id)).setOption({
+    grid:{left:40,right:30,top:20,bottom:40},
+    xAxis:{type:'category',data:cats,axisLabel:{fontSize:9,interval:0,rotate:25}},
+    yAxis:{type:'value',splitLine:{lineStyle:{color:'#eee'}}},
+    series:[{type:'bar',data:vals,itemStyle:{color:color||AMBER},barWidth:18,label:{show:true,position:'top',fontSize:10}}]});
+}
+layoffBar('lAuto',['大众','特斯拉','博世','日产','福特','理想'],[35000,19666,10000,9000,4000,5600],RED);
+layoffBar('lTech',['阿里','飞书','IBM中国','三星中国','英特尔','戴尔','谷歌','苹果'],[6900,1000,1000,130,15000,12500,1000,714],BLUE);
+layoffBar('lHealth',['强生中国','药明康德','拜耳','BMS','武田','诺华'],[2000,2982,1500,2200,1000,680],BLUE2);
+layoffBar('lFin',['中金','高盛','花旗','PayPal'],[246,'1300-1800',20000,2500],AMBER);
+layoffBar('lGame',['动视暴雪','Unity','拳头','Twitch'],[1900,1800,530,500],RED);
+layoffBar('lRetail',['大润发','Sainsbury'],[16323,1500],AMBER);
+layoffBar('lBeauty',['联合利华','雅诗兰黛','资生堂','丝芙兰','Burberry'],[7500,'1800-3000',1500,120,500],BLUE);
+layoffBar('lWear',['李维斯','耐克','加拿大鹅总部'],['2000-3000',1600,156],RED);
+layoffBar('lMedia',['皮克斯','派拉蒙','华纳音乐'],[175,2000,1350],GRAY);
+
+window.addEventListener('resize',()=>{document.querySelectorAll('.chart').forEach(el=>{const c=echarts.getInstanceByDom(el);c&&c.resize();})});
+</script>
 </body>
 </html>
